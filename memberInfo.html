@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원정보</title>
+  <link rel="stylesheet" href="./css/style_member.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+    <nav class="navigator">
+        <h3><a href="./index.html">DongMap</a></h3>
+        <ul class="navigator">
+            <li><a class="nav-menu" href="./mypage.html">Introduction</a></li>
+            <li><a class="nav-menu" href="./travel.html">Travel</a></li>
+            <li><a class="nav-menu" href="./road-Map.html">RoadMap</a></li>
+            <li><a class="nav-menu" href="./memberInfo.html">memberInfo</a></li>
+        </ul>
+    </nav>
+    <ul class="nav-auth">
+        <li><a class="auth-menu" href="./login.html">로그인</a></li>
+        <li><a class="auth-menu" href="./joinForm.html">회원가입</a></li>
+    </ul>
+    <h2>DongMap Member Info</h2>
+    <table id="tb-memberInfo">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>ID</th>
+                <th>이름</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+            const renderMemberInfo = (members = JSON.parse(localStorage.getItem('members')))=>{
+            // guestbooks = guestbooks || JSON.parse(localStorage.getItem('guestbooks'));
+            const tbody = document.querySelector('#tb-memberInfo tbody');
+            tbody.innerHTML = "";
+
+            let html="";
+            members.forEach((member, index)=>{
+                const {userId, userName} = member; //꺼내기
+
+                html += `<tr>`;
+                html += `<td>${index + 1}</td>`;
+                html += `<td>${userId}</td>`;
+                html += `<td>${userName}</td>`;
+                html += `</tr>`;
+            });
+            tbody.innerHTML = html;
+        }
+        window.addEventListener('load',()=>{
+            renderMemberInfo();
+        });
+    </script>
+    </div>
+</body>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인</title>
+  <link rel="stylesheet" href="./css/style_auth.css">
+</head>
+<body>
+    <div class="container">
+        <a href="./index.html">◀</a>
+        <div class="form-box">
+            <h1>로그인</h1>
+            <form name="loginForm" action="javascript:loginVaild();">
+                <p>
+                    <label for="userid">아이디</label>
+                    <br>
+                    <input type="text" name="userid" id="userid" placeholder="아이디">
+                    <div id="idValid"></div>
+                </p>
+                <p>
+                    <label for="pw">비밀번호</label>
+                    <br>
+                    <input type="password" name="password" id="password" placeholder="비밀번호">
+                    <div id="pwValid"></div>
+                </p>
+                <button type="submit" id="loginBtn">로그인</button>
+                
+                <p>아직 회원이 아니세요?? <a href="./joinForm.html" id="joinLink">회원가입</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="./js/loginValidation.js">
+
+    </script>
+</body>
+</html>

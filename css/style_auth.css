@@ -1,0 +1,56 @@
+body {
+    background-color: #F7F5F2;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 100vh;
+
+    background-color: white;
+    margin: 0px auto;
+
+}
+.container a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}
+.form-box {
+    width: 300px;
+    flex-direction: row;
+    margin: 50px 80px;
+}
+.form-box h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+input {
+    width: 330px;
+    height: 30px;
+    
+    border-radius: 3px;
+    border: 1px solid gray;
+    margin-top: 10px;
+    font-size: 15px;
+}
+input:valid{
+    background-color: white;
+}
+#joinBtn, #loginBtn{
+    width: 335px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+#joinLink {
+    font-size: 18px;
+    color: black;
+    transition: all .2s;
+    text-decoration: underline;
+}
+#joinLink:hover {
+    font-size: 20px;
+    font-weight: 500;
+}
